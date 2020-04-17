@@ -1,6 +1,6 @@
 # MPA_data_integration
 
-Code for converting MPA-related biological data from the California coast to Darwin Core Standard format.
+Code for converting MPA-related biological data from the California coast to Darwin Core Standard format. <br>
 https://dwc.tdwg.org/terms/#occurrence
 
 **Author:** Diana LaScala-Gruenewald <br>
