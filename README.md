@@ -10,5 +10,6 @@ https://dwc.tdwg.org/terms/#occurrence
 **CCFRP** - code for converting California Collaborative Fisheries Research Program data
 - **CCFRP_species_name_conversion.ipynb** - initial code for finding scientific names from common names
 - **CCFRP_common_to_scientific.csv** - file containing common and scientific names for all species in CCFRP data set
+- **CCFRP_conversion.ipynb** - initial code for full DwC conversion
 
 **WoRMS.py** - functions for querying the World Register of Marine Species (WoRMS) REST API
