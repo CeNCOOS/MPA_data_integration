@@ -103,6 +103,52 @@ def get_worms_from_common_name(common_name):
         print('Query wasn\'t successful, check name: ', common_name)
 
 
+def run_get_worms_from_scientific_name(sci_names):
+    """
+    Calls get_worms_from_scientific_name on each name in sci_names. Returns dictionaries mapping
+    sci_names to WoRMS names, ids and taxon ids.
+
+    Dependencies:
+        import urllib.request, urllib.parse, json
+
+    Usage:
+        run_get_worms_from_scientific_name(sci_names)
+
+    Inputs:
+        An iterable (e.g. pandas series, list) containing unique scientific names as strings, e.g.
+            ['Dosidicus gigas', 'Sebastes', 'Hippoglossina stomata]
+
+    Outputs:
+        1. name_id_dict: Dictionary mapping sci_names to WoRMS ids
+        2. name_name_dict: Dictionary mapping sci_names to the matched scientific names from WoRMS
+        3. name_taxid_dict: Dictionary mapping sci_names to taxon ids
+
+    Patrick Daniels, Diana LaScala-Gruenewald
+    2020-04-22
+    Python 3.7
+    """
+
+    name_id_dict = {}  # maps scientific names to WoRMS ids
+    name_name_dict = {}  # maps scientific names to the matched scientific names from WoRMS
+    name_taxid_dict = {}  # maps scientific names to taxon ids
+
+    for sci_name in sci_names:
+
+        # strip any extra whitespace
+        sci_name = sci_name.strip()
+
+        try:
+            sname, sname_id, id = get_worms_from_scientific_name(sci_name)
+            name_id_dict[sci_name] = sname_id
+            name_name_dict[sci_name] = sname
+            name_taxid_dict[sci_name] = id
+
+        except:
+            pass  # very hacky
+
+    return((name_id_dict, name_name_dict, name_taxid_dict))
+
+
 if __name__ == '__main__':
     pass
 
