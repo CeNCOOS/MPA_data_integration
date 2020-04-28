@@ -1,4 +1,9 @@
+# notebook checkpoints
 /CCFRP/.ipynb_checkpoints/CCFRP_data_conversion-checkpoint.ipynb
 /CCFRP/.ipynb_checkpoints/CCFRP_species_name_conversion-checkpoint.ipynb
 /CCFRP/.ipynb_checkpoints/CCFRP_conversion-checkpoint.ipynb
+/CCFRP/.ipynb_checkpoints/CCFRP_grid-level_conversion-checkpoint.ipynb
+
+# data files
 /CCFRP/CCFRP_converted.csv
+/CCFRP/CCFRP_grid-level_converted.csv
