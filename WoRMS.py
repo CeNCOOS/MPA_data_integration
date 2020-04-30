@@ -40,11 +40,13 @@ def get_worms_from_scientific_name(sci_name, verbose=False):
 
     # If it fails, try searching for just the genus
     except Exception as e:
+
         if len(sci_name_url.split('%20')) > 1:
-            # If species is unknown and listed as spp. or sp.
-            return get_worms_from_scientific_name(sci_name_url.split('%20')[0])
+            # Catches situations where species is unknown and listed as spp. or sp.
+            print("Url didn't work for", sci_name, "checking: ", sci_name.split(' ')[0])
+            return get_worms_from_scientific_name(sci_name_url.split('%20')[0], verbose)
         elif verbose:
-            print("Url didn't work, check name, ", sci_name)
+            print("Url didn't work, check name: ", sci_name)
 
 
 def get_worms_from_common_name(common_name):
@@ -104,7 +106,7 @@ def get_worms_from_common_name(common_name):
         print('Query wasn\'t successful, check name: ', common_name)
 
 
-def run_get_worms_from_scientific_name(sci_names):
+def run_get_worms_from_scientific_name(sci_names, verbose_flag=False):
     """
     Calls get_worms_from_scientific_name on each name in sci_names. Returns dictionaries mapping
     sci_names to WoRMS names, ids and taxon ids.
@@ -139,7 +141,7 @@ def run_get_worms_from_scientific_name(sci_names):
         sci_name = sci_name.strip()
 
         try:
-            sname, sname_id, id = get_worms_from_scientific_name(sci_name)
+            sname, sname_id, id = get_worms_from_scientific_name(sci_name, verbose=verbose_flag)
             name_id_dict[sci_name] = sname_id
             name_name_dict[sci_name] = sname
             name_taxid_dict[sci_name] = id
