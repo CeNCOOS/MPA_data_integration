@@ -1,4 +1,4 @@
-def get_worms_from_scientific_name(sci_name):
+def get_worms_from_scientific_name(sci_name, verbose=False):
     """
     Using the WoRMS REST API, retrieve WoRMS ID and taxon ID given a scientific name.
 
@@ -10,6 +10,7 @@ def get_worms_from_scientific_name(sci_name):
 
     Inputs:
         The scientific name of interest as a string, e.g. 'Dosidicus gigas'
+        Optionally, the verbose flag to print species names that aren't matched
 
     Outputs:
         1. scientificName: WoRMS specified scientific name that matched to sci_name
@@ -42,7 +43,7 @@ def get_worms_from_scientific_name(sci_name):
         if len(sci_name_url.split('%20')) > 1:
             # If species is unknown and listed as spp. or sp.
             return get_worms_from_scientific_name(sci_name_url.split('%20')[0])
-        else:
+        elif verbose:
             print("Url didn't work, check name, ", sci_name)
 
 
