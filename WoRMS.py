@@ -36,7 +36,7 @@ def get_worms_from_scientific_name(sci_name, verbose=False):
     try:
         with urllib.request.urlopen(_url) as url:
             data = json.loads(url.read().decode())
-            return (data[0][0]['scientificname'], data[0][0]['lsid'], data[0][0]['AphiaID'])
+            return (data[0][0]['scientificname'], data[0][0]['lsid'], data[0][0]['AphiaID'], data[0][0]['class'])
 
     # If it fails, try searching for just the genus
     except Exception as e:
@@ -125,6 +125,7 @@ def run_get_worms_from_scientific_name(sci_names, verbose_flag=False):
         1. name_id_dict: Dictionary mapping sci_names to WoRMS ids
         2. name_name_dict: Dictionary mapping sci_names to the matched scientific names from WoRMS
         3. name_taxid_dict: Dictionary mapping sci_names to taxon ids
+        4. name_class_dict: Dictionary mapping sci_names to class
 
     Patrick Daniels, Diana LaScala-Gruenewald
     2020-04-22
@@ -134,6 +135,7 @@ def run_get_worms_from_scientific_name(sci_names, verbose_flag=False):
     name_id_dict = {}  # maps scientific names to WoRMS ids
     name_name_dict = {}  # maps scientific names to the matched scientific names from WoRMS
     name_taxid_dict = {}  # maps scientific names to taxon ids
+    name_class_dict = {} # maps scientific names to class
 
     for sci_name in sci_names:
 
@@ -141,15 +143,16 @@ def run_get_worms_from_scientific_name(sci_names, verbose_flag=False):
         sci_name = sci_name.strip()
 
         try:
-            sname, sname_id, id = get_worms_from_scientific_name(sci_name, verbose=verbose_flag)
+            sname, sname_id, id, c = get_worms_from_scientific_name(sci_name, verbose=verbose_flag)
             name_id_dict[sci_name] = sname_id
             name_name_dict[sci_name] = sname
             name_taxid_dict[sci_name] = id
+            name_class_dict[sci_name] = c
 
         except:
             pass  # very hacky
 
-    return((name_id_dict, name_name_dict, name_taxid_dict))
+    return((name_id_dict, name_name_dict, name_taxid_dict, name_class_dict))
 
 
 if __name__ == '__main__':
