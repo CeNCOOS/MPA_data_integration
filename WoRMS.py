@@ -43,7 +43,8 @@ def get_worms_from_scientific_name(sci_name, verbose=False):
 
         if len(sci_name_url.split('%20')) > 1:
             # Catches situations where species is unknown and listed as spp. or sp.
-            print("Url didn't work for", sci_name, "checking: ", sci_name.split(' ')[0])
+            if verbose:
+                print("Url didn't work for", sci_name, "checking: ", sci_name.split(' ')[0])
             return get_worms_from_scientific_name(sci_name_url.split('%20')[0], verbose)
         elif verbose:
             print("Url didn't work, check name: ", sci_name)
