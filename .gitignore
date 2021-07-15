@@ -8,6 +8,8 @@
 # data files
 *.csv
 *.txt
+*.xls
+*.xlsx
 /CCFRP/CCFRP_converted.csv
 /CCFRP/CCFRP_grid-level_converted.csv
 /CCFRP/.ipynb_checkpoints/CCFRP_grid-level_converted-checkpoint.csv
