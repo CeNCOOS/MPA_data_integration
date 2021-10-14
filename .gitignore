@@ -18,3 +18,6 @@
 *.data
 /North coast kelp/Abalone_Dive Surveys_EH_06242020.mdb
 /North coast kelp/AbaloneDiveSurveys-06242020.mdb
+
+# metadata files
+*.xml
