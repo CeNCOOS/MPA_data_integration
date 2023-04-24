@@ -24,6 +24,7 @@ Code for converting data from the Estuaries monitoring program led by researcher
 Code for converting data from the [MARINe](https://marine.ucsc.edu/) monitoring program ([count](https://data.piscoweb.org/metacatui/view/doi%3A10.6085%2FAA%2Fmarine_ltm.4.8) and [photoplot/transect data archived on DataONE](https://data.piscoweb.org/metacatui/view/doi%3A10.6085%2FAA%2Fmarine_ltm.12.5))
 - **MARINe_LTM_count_conversion.ipynb** - Jupyter Notebook containing the conversion code for sea star and Katharina count data. **This is the final notebook that was uploaded to Axiom's Research Workspace. Additional changes to the code have been made on that platform.**
 - **MARINe_LTM_phototransect_conversion.ipynb** - Jupyter Notebook containing the conversion code for photoplot and phototransect percent cover data. **This is the final notebook that was uploaded to Axiom's Research Workspace. Additional changes to the code have been made on that platform.**
+- **MARINe_CBS_pointcontact_conversion.ipynb** - Jupyter Notebook containing the conversion code for coastal biodiversity surveys of percent cover data using point contact. 
 
 ### North Coast Kelp
 Code for preparing the North Coast Kelp survey data (monitoring team led by Laura Rogers-Bennett) for submission to DataONE and for converting the data to DwC
@@ -69,6 +70,12 @@ Code for converting data from the Sandy Beaches monitoring program led by resear
 **Reef Check** - [Fish, invertebrate, algae, and UPC transect data](https://obis.org/dataset/cfceb150-bbe2-4efb-8682-14cfc7167e7c)
 
 ## Links to entries in [CeNCOOS](https://data.cencoos.org/) and [MBON](https://mbon.ioos.us/) data catalogues
-**CCFRP** - Fish abundance and CPUE ([CeNCOOS](https://data.cencoos.org/#module-metadata/e2685d37-f661-4e47-b55f-47890ef243d6/0d895d62-3aa1-4b6a-b2ec-e7e12aab74f8), [MBON](https://mbon.ioos.us/#module-metadata/e2685d37-f661-4e47-b55f-47890ef243d6/0d895d62-3aa1-4b6a-b2ec-e7e12aab74f8))
+**CCFRP** 
+- Fish abundance and CPUE ([CeNCOOS](https://data.cencoos.org/#module-metadata/e2685d37-f661-4e47-b55f-47890ef243d6/0d895d62-3aa1-4b6a-b2ec-e7e12aab74f8), [MBON](https://mbon.ioos.us/#module-metadata/e2685d37-f661-4e47-b55f-47890ef243d6/0d895d62-3aa1-4b6a-b2ec-e7e12aab74f8))
 
-**Reef Check** - Fish, invertebrate, and algae transect data, abalone and sea urchin size data, and invasive algae presence/absence data ([CeNCOOS](https://data.cencoos.org/#module-metadata/10b12afd-c2d4-410b-bff1-c94ca0b71a24/43a6cb45-1c97-477c-8977-805d4910c2ea), [MBON](https://mbon.ioos.us/#module-metadata/10b12afd-c2d4-410b-bff1-c94ca0b71a24))
+**Reef Check** 
+- Fish, invertebrate, and algae transect data, abalone and sea urchin size data, and invasive algae presence/absence data ([CeNCOOS](https://data.cencoos.org/#module-metadata/10b12afd-c2d4-410b-bff1-c94ca0b71a24/43a6cb45-1c97-477c-8977-805d4910c2ea), [MBON](https://mbon.ioos.us/#module-metadata/10b12afd-c2d4-410b-bff1-c94ca0b71a24))
+
+**MARINe** 
+- Long-Term Monitoring Surveys: Transects and Photoplots ([CalOOS](https://data.caloos.org/#module-metadata/dbd06ba8-024a-498b-b1c5-45ffb3e76022), [MBON](https://mbon.ioos.us/#module-metadata/dbd06ba8-024a-498b-b1c5-45ffb3e76022))
+- Sea Stars and Katharina along the Pacific coast from Alaska to Mexico, 1992 - 2021 ([CalOOS](https://data.caloos.org/#module-metadata/eb29d751-8534-4869-a920-030566f903fa/0736dd24-89c2-4880-a824-4a862d199062), [MBON](https://mbon.ioos.us/#module-metadata/eb29d751-8534-4869-a920-030566f903fa/0736dd24-89c2-4880-a824-4a862d199062))
