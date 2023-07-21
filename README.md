@@ -34,7 +34,7 @@ Code for preparing the North Coast Kelp survey data (monitoring team led by Laur
 - **north_coast_kelp_dataone_draft2.ipynb** - Jupyter Notebook containing code to clean the data and prepare it for DataONE. **This is the final notebook that should be used for future work.**
 
 ### PISCO
-Code for converting [PISCO](http://www.piscoweb.org/) survey data to DwC ([archived on DataONE](https://opc.dataone.org/view/MLPA_kelpforest.metadata.1))
+Code for converting [PISCO](http://www.piscoweb.org/) survey data to DwC ([archived on DataONE](https://opc.dataone.org/view/doi%3A10.25494%2FP6%2FMLPA_kelpforest.5))
 - **PISCO_add_absence_records.ipynb** - Jupyter Notebook where I developed and tested code to populate absence records in the PISCO fish and swath transect data, which they store as a presence-only data set
 - **PISCO_fish_transect_conversion.ipynb** - Jupyter Notebook containing code to convert the fish transect data through 2018 to DwC
 - **PISCO_fish_transect_conversion_20210816.ipynb** - Jupyter Notebook containing code to convert the fish transect data through 2020 to DwC. **This is the final fish transect notebook that was uploaded to Axiom's Research Workspace. Additional changes to the code have been made on that platform.**
