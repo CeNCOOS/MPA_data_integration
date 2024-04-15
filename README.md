@@ -27,11 +27,9 @@ Code for converting data from the [MARINe](https://marine.ucsc.edu/) monitoring 
 - **MARINe_CBS_pointcontact_conversion.ipynb** - Jupyter Notebook containing the conversion code for coastal biodiversity surveys of percent cover data using point contact. 
 
 ### North Coast Kelp
-Code for preparing the North Coast Kelp survey data (monitoring team led by Laura Rogers-Bennett) for submission to DataONE and for converting the data to DwC
-- **north_coast_kelp_conversion.ipynb** - Jupyter Notebook containing the extraction of the data from a Microsoft Access Database (which will only run on a Windows machine) and an initial exploration and conversion attempt
-- **north_coast_kelp_conversion_draf2.ipynb** - Jupyter Notebook containing a second conversion attempt after I had a better understanding of the data structure. If I have a chance to return to converting these data to DwC, I'll probably build from this notebook.
-- **north_coast_kelp_dataone.ipynb** - Jupyter Notebook containing code to clean the data and prepare it for submission to DataONE
-- **north_coast_kelp_dataone_draft2.ipynb** - Jupyter Notebook containing code to clean the data and prepare it for DataONE. **This is the final notebook that should be used for future work.**
+Code for converting the [Bull Kelp Forest Ecosystem Monitoring Database, Northern California, 1971-2019](https://search.dataone.org/view/urn%3Auuid%3A41177927-92dc-421a-b8eb-d28f71537d96) (monitoring team led by Laura Rogers-Bennett) dataset to a DwC archive, and for running QC tests before re-uploading to DataONE. Note that Marine Lebrec worked on this dataset, building from existing code that Diana had started, which live in the old_notebooks/ directory. 
+- **north_coast_kelp_DWC_conversion.ipynb** - Jupyter Notebook containing code for QC'ing and pre-processing counts, size, % algae, and % habitat type tables, and converting to a DwC archive with an event core. 
+**This is the final notebook that was uploaded to Axiom's Research Workspace. Additional changes to the code have been made on that platform.**
 
 ### PISCO
 Code for converting [PISCO](http://www.piscoweb.org/) survey data to DwC ([archived on DataONE](https://opc.dataone.org/view/doi%3A10.25494%2FP6%2FMLPA_kelpforest.5))
