@@ -23,5 +23,4 @@
 *.xml
 
 #DS_Store
-*.DS_Store
-/MARINe/CBS_swathsurveys/processed_files/.DS_Store
+.DS_Store
