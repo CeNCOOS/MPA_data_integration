@@ -6,7 +6,7 @@
 /CCFRP/.ipynb_checkpoints/CCFRP_grid-level_conversion-checkpoint.ipynb
 
 # data files
-*.csv
+#*.csv
 *.txt
 *.xls
 *.xlsx
@@ -21,3 +21,6 @@
 
 # metadata files
 *.xml
+
+#DS_Store
+*.DS_Store
